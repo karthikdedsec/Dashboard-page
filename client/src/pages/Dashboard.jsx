@@ -5,6 +5,7 @@ import support from "../Assets/Support.png";
 import plugins from "../Assets/Puzzle.png";
 import help from "../Assets/Help.png";
 import ShutDown from "../Assets/Shutdown.png";
+import LineChartdta from "../components/LineChart";
 
 function Dashboard() {
   return (
@@ -13,25 +14,29 @@ function Dashboard() {
       <div className="w-60 h-screen bg-slate-700 flex flex-col justify-between">
         {/* briefcase */}
         <div className="flex flex-col justify-center items-center">
-          <img className="self-center" src={briefcase} alt="briefcase" />
+          <img
+            className="self-center"
+            src={briefcase}
+            alt="briefcase w-2 h-2"
+          />
           <img src={statBoard} />
         </div>
 
         {/* pages */}
         <div className="flex flex-col gap-8 mx-auto w-full">
-          <div className="ml-4 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
             <img src={circleMenu} alt="circlemenu" />
             <p className="text-white">Dashboard</p>
           </div>
-          <div className="ml-4 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
             <img src={support} alt="support" />
             <p className="text-white">Support</p>
           </div>
-          <div className="ml-4 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
             <img src={plugins} alt="plugin" />
             <p className="text-white">Plugins</p>
           </div>
-          <div className="ml-4 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
             <img src={help} alt="help" />
             <p className="text-white">Help</p>
           </div>
@@ -60,7 +65,9 @@ function Dashboard() {
         </div>
         {/* end of top section */}
         {/* mid section */}
-        <div></div>
+        <div className="p-4">
+          <LineChartdta />
+        </div>
         {/*end of mid section */}
       </div>
       {/* left and right side */}
