@@ -6,6 +6,7 @@ import plugins from "../Assets/Puzzle.png";
 import help from "../Assets/Help.png";
 import ShutDown from "../Assets/Shutdown.png";
 import LineChartdta from "../components/LineChart";
+import PieChartdta from "../components/PieChart";
 
 function Dashboard() {
   return (
@@ -65,8 +66,9 @@ function Dashboard() {
         </div>
         {/* end of top section */}
         {/* mid section */}
-        <div className="p-4">
+        <div className="p-4 flex gap-8 max-w-5xl mx-auto">
           <LineChartdta />
+          <PieChartdta />
         </div>
         {/*end of mid section */}
       </div>
