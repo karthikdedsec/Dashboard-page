@@ -7,12 +7,13 @@ import help from "../Assets/Help.png";
 import ShutDown from "../Assets/Shutdown.png";
 import LineChartdta from "../components/LineChart";
 import PieChartdta from "../components/PieChart";
+import DataTablec from "../components/DataTable";
 
 function Dashboard() {
   return (
-    <div className="flex">
+    <div className="flex ">
       {/* left and right side */}
-      <div className="w-60 h-screen bg-slate-700 flex flex-col justify-between">
+      <div className="w-60 bg-slate-700 flex flex-col justify-between flex-wrap">
         {/* briefcase */}
         <div className="flex flex-col justify-center items-center">
           <img
@@ -48,7 +49,7 @@ function Dashboard() {
           <img src={ShutDown} alt="shutdown" />
         </div>
       </div>
-      <div className="h-screen w-full bg-slate-200">
+      <div className=" w-full bg-slate-200">
         {/* top section */}
         <div className="flex justify-between max-w-6xl mx-auto p-2">
           <p>Good Morning!</p>
@@ -66,9 +67,14 @@ function Dashboard() {
         </div>
         {/* end of top section */}
         {/* mid section */}
-        <div className="p-4 flex gap-8 max-w-5xl mx-auto">
-          <LineChartdta />
-          <PieChartdta />
+        <div className="p-4 flex flex-col gap-10 max-w-5xl mx-auto">
+          <div className="flex gap-10">
+            <LineChartdta />
+            <PieChartdta />
+          </div>
+          <div>
+            <DataTablec />
+          </div>
         </div>
         {/*end of mid section */}
       </div>
