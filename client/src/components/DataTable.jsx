@@ -42,7 +42,7 @@ function DataTablec() {
 
   //   console.log(data);
   return (
-    <div className="max-w-3xl rounded-lg shadow-lg">
+    <div className="max-w-md rounded-lg shadow-lg ">
       <DataTable columns={column} data={data}></DataTable>
     </div>
   );

@@ -8,6 +8,8 @@ import ShutDown from "../Assets/Shutdown.png";
 import LineChartdta from "../components/LineChart";
 import PieChartdta from "../components/PieChart";
 import DataTablec from "../components/DataTable";
+import Card from "../components/Card";
+import person from "../Assets/Rectangle 10.png";
 
 function Dashboard() {
   return (
@@ -60,20 +62,25 @@ function Dashboard() {
             </div>
             <img
               className="max-w-10 max-h-10"
-              src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+              src={person}
               alt="person image"
             />
           </div>
         </div>
         {/* end of top section */}
         {/* mid section */}
-        <div className="p-4 flex flex-col gap-10 max-w-5xl mx-auto">
+        <div className="p-4 flex flex-col gap-10 max-w-6xl mx-auto">
           <div className="flex gap-10">
             <LineChartdta />
             <PieChartdta />
           </div>
-          <div>
-            <DataTablec />
+          <div className="flex justify-between">
+            <div>
+              <DataTablec />
+            </div>
+            <div className="pr-96">
+              <Card />
+            </div>
           </div>
         </div>
         {/*end of mid section */}
