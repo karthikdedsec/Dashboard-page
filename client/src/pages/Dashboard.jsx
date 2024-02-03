@@ -7,9 +7,10 @@ import help from "../Assets/Help.png";
 import ShutDown from "../Assets/Shutdown.png";
 import LineChartdta from "../components/LineChart";
 import PieChartdta from "../components/PieChart";
-import DataTablec from "../components/DataTable";
+
 import Card from "../components/Card";
 import person from "../Assets/Rectangle 10.png";
+import Table from "../components/Table";
 
 function Dashboard() {
   return (
@@ -28,19 +29,19 @@ function Dashboard() {
 
         {/* pages */}
         <div className="flex flex-col gap-8 mx-auto w-full">
-          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-white p-3 rounded-l-lg cursor-pointer">
             <img src={circleMenu} alt="circlemenu" />
-            <p className="text-white">Dashboard</p>
+            <p className="text-black">Dashboard</p>
           </div>
-          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-l-lg hover:bg-gray-600 cursor-pointer">
             <img src={support} alt="support" />
             <p className="text-white">Support</p>
           </div>
-          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-l-lg hover:bg-gray-600 cursor-pointer">
             <img src={plugins} alt="plugin" />
             <p className="text-white">Plugins</p>
           </div>
-          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-md hover:bg-gray-600 cursor-pointer">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-l-lg hover:bg-gray-600 cursor-pointer">
             <img src={help} alt="help" />
             <p className="text-white">Help</p>
           </div>
@@ -53,8 +54,8 @@ function Dashboard() {
       </div>
       <div className=" w-full bg-slate-200">
         {/* top section */}
-        <div className="flex justify-between max-w-6xl mx-auto p-2">
-          <p>Good Morning!</p>
+        <div className="flex justify-between items-center max-w-6xl mx-auto p-2">
+          <p className="font-semibold">Good Morning!</p>
           <div className="flex gap-2 items-center bg-white p-2 rounded-md shadow-md ">
             <div className="flex flex-col gap-1">
               <p className="font-semibold">John Doe</p>
@@ -74,11 +75,10 @@ function Dashboard() {
             <LineChartdta />
             <PieChartdta />
           </div>
-          <div className="flex justify-between">
-            <div>
-              <DataTablec />
-            </div>
-            <div className="pr-96">
+          <div className="flex gap-8">
+            <Table />
+
+            <div className="">
               <Card />
             </div>
           </div>
