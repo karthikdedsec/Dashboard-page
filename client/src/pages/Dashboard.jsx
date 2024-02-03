@@ -14,11 +14,11 @@ import Table from "../components/Table";
 
 function Dashboard() {
   return (
-    <div className="flex ">
+    <div className="flex flex-col sm:flex-row">
       {/* left and right side */}
-      <div className="w-60 bg-slate-700 flex flex-col justify-between flex-wrap">
+      <div className="w-full sm:w-60 bg-slate-700 flex flex-row sm:flex-col justify-between flex-wrap">
         {/* briefcase */}
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center pb-1">
           <img
             className="self-center"
             src={briefcase}
@@ -28,20 +28,20 @@ function Dashboard() {
         </div>
 
         {/* pages */}
-        <div className="flex flex-col gap-8 mx-auto w-full">
-          <div className="ml-9 flex gap-3 justify-start items-center bg-white p-3 rounded-l-lg cursor-pointer">
+        <div className="flex sm:flex-col gap-1 sm:gap-8 mx-auto w-full flex-wrap">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-white p-3 sm:rounded-l-lg cursor-pointer">
             <img src={circleMenu} alt="circlemenu" />
             <p className="text-black">Dashboard</p>
           </div>
-          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-l-lg hover:bg-gray-600 cursor-pointer">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 sm:rounded-l-lg hover:bg-gray-600 cursor-pointer">
             <img src={support} alt="support" />
             <p className="text-white">Support</p>
           </div>
-          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-l-lg hover:bg-gray-600 cursor-pointer">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 sm:rounded-l-lg hover:bg-gray-600 cursor-pointer">
             <img src={plugins} alt="plugin" />
             <p className="text-white">Plugins</p>
           </div>
-          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 rounded-l-lg hover:bg-gray-600 cursor-pointer">
+          <div className="ml-9 flex gap-3 justify-start items-center bg-gray-800 p-3 sm:rounded-l-lg hover:bg-gray-600 cursor-pointer">
             <img src={help} alt="help" />
             <p className="text-white">Help</p>
           </div>
@@ -54,7 +54,7 @@ function Dashboard() {
       </div>
       <div className=" w-full bg-slate-200">
         {/* top section */}
-        <div className="flex justify-between items-center max-w-6xl mx-auto p-2">
+        <div className="flex flex-col justify-between items-center max-w-6xl mx-auto p-2 sm:flex-row">
           <p className="font-semibold">Good Morning!</p>
           <div className="flex gap-2 items-center bg-white p-2 rounded-md shadow-md ">
             <div className="flex flex-col gap-1">
@@ -71,11 +71,11 @@ function Dashboard() {
         {/* end of top section */}
         {/* mid section */}
         <div className="p-4 flex flex-col gap-10 max-w-6xl mx-auto">
-          <div className="flex gap-10">
+          <div className="flex flex-col sm:flex-row gap-10">
             <LineChartdta />
             <PieChartdta />
           </div>
-          <div className="flex gap-8">
+          <div className="flex flex-col sm:flex-row gap-8">
             <Table />
 
             <div className="">
